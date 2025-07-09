@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-export default function Home() {
+export default function InvestorsPage() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -14,11 +14,9 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="eco-hero-section" ref={sectionRef}>
-      <h1 className="eco-hero-title">
-        An overnight success,<br />
-        <span className="eco-hero-highlight">businesses</span> in the making
-      </h1>
+    <section className="eco-page-section" id="investors-section" ref={sectionRef}>
+      <h1 className="eco-page-title eco-page-title-above-line">Investors</h1>
+      <p className="eco-page-desc">Discover investment opportunities with us. We partner with forward-thinking investors to create lasting value and impact.</p>
     </section>
   );
-}
+} 
