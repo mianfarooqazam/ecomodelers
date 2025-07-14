@@ -1,0 +1,44 @@
+import "../app/globals.css";
+import Image from "next/image";
+import { Numans } from "next/font/google";
+import Link from "next/link";
+
+const numans = Numans({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-numans",
+});
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <div className={`${numans.variable} antialiased sustainable-bg`}>
+      <div className="eco-bg-overlay">
+        <div className="eco-layout">
+          <aside className="eco-sidebar">
+            <div className="eco-logo">
+              <Image src="/file.svg" alt="Logo" width={36} height={36} />
+              <span className="eco-logo-text">Grow<br/>Partners</span>
+            </div>
+            <nav className="eco-nav">
+              <Link href="/about" className="eco-nav-link">About us</Link>
+              <Link href="/contacts" className="eco-nav-link">Contacts</Link>
+              <Link href="/investors" className="eco-nav-link">Investors</Link>
+              <Link href="/companies" className="eco-nav-link">Companies</Link>
+            </nav>
+            <div className="eco-socials">
+              <span className="eco-socials-label">Our socials:</span>
+              <div className="eco-socials-icons">
+                <a href="#" aria-label="Facebook" className="eco-social-icon">f</a>
+                <a href="#" aria-label="Instagram" className="eco-social-icon">i</a>
+                <a href="#" aria-label="LinkedIn" className="eco-social-icon">in</a>
+              </div>
+            </div>
+          </aside>
+          <main className="eco-main-content">
+            <Component {...pageProps} />
+          </main>
+        </div>
+      </div>
+    </div>
+  );
+} 
