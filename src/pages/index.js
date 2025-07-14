@@ -35,8 +35,8 @@ export default function Home() {
             maxWidth: '600px',
             marginBottom: '3rem'
           }}>
-            We help forward-thinking companies achieve environmental excellence while driving business growth. 
-            Our AI-powered sustainability solutions create measurable impact for your bottom line and the planet.
+          Energy efficiency is no longer a luxury — it`&apos;s a necessity. Whether it`&apos;s a commercial high-rise, industrial facility, or residential building, Ecomodelers delivers smart energy solutions that reduce consumption, lower costs, and enhance sustainability.
+
           </p>
           
           <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', marginTop: '3rem' }}>
