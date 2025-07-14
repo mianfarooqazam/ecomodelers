@@ -15,9 +15,6 @@ export default function Portfolio() {
 
   return (
     <section className="eco-page-section" ref={sectionRef}>
-      <h1 className="eco-page-title-above-line">Our Portfolio</h1>
-      <div className="eco-page-divider"></div>
-      
       <div className="eco-page-content">
         <h2 className="eco-page-title">Transforming Businesses Through Sustainability</h2>
         <p className="eco-page-desc">

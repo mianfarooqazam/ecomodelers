@@ -15,9 +15,6 @@ export default function Services() {
 
   return (
     <section className="eco-page-section" ref={sectionRef}>
-      <h1 className="eco-page-title-above-line">Our Services</h1>
-      <div className="eco-page-divider"></div>
-      
       <div className="eco-page-content">
         <h2 className="eco-page-title">Comprehensive Sustainability Solutions</h2>
         <p className="eco-page-desc">

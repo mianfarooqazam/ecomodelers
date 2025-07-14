@@ -15,15 +15,11 @@ export default function WhyUs() {
 
   return (
     <section className="eco-page-section" ref={sectionRef}>
-      <h1 className="eco-page-title-above-line">Why Choose Eco Modelers</h1>
-      <div className="eco-page-divider"></div>
-      
       <div className="eco-page-content">
         <h2 className="eco-page-title">Sustainable Innovation at Its Core</h2>
         <p className="eco-page-desc">
           We are pioneers in sustainable business modeling, combining cutting-edge technology with environmental consciousness to create solutions that benefit both your business and the planet.
         </p>
-        
         <div className="eco-features-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           <div className="eco-feature-card" style={{ background: '#111', padding: '2rem', borderRadius: '12px', border: '1px solid #222' }}>
             <h3 style={{ color: '#0ce449', fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '600' }}>Expert Sustainability</h3>
