@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import BlurFocus from "../components/BlurFocus";
 
 export default function Home() {
   const sectionRef = useRef(null);
@@ -18,7 +19,9 @@ export default function Home() {
       <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
         <h1 className="eco-hero-title">
           Transforming Business Through<br />
-          <span className="eco-hero-highlight">Sustainable Innovation</span>
+          <span className="eco-hero-highlight">
+            <BlurFocus sentence="Sustainable Innovation" />
+          </span>
         </h1>
         
         <p style={{ 
