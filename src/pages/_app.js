@@ -16,8 +16,7 @@ export default function MyApp({ Component, pageProps }) {
         <div className="eco-layout">
           <aside className="eco-sidebar">
             <div className="eco-logo">
-              <Image src="/file.svg" alt="Logo" width={36} height={36} />
-              <span className="eco-logo-text">Eco<br/>Modelers</span>
+              <Image src={require("../app/eco-logo.jpeg")} alt="Logo" width={36} height={36} />
             </div>
             <nav className="eco-nav">
               <Link href="/" className="eco-nav-link font-black">Home</Link>
