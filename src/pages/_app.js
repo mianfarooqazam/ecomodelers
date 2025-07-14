@@ -17,13 +17,16 @@ export default function MyApp({ Component, pageProps }) {
           <aside className="eco-sidebar">
             <div className="eco-logo">
               <Image src="/file.svg" alt="Logo" width={36} height={36} />
-              <span className="eco-logo-text">Grow<br/>Partners</span>
+              <span className="eco-logo-text">Eco<br/>Modelers</span>
             </div>
             <nav className="eco-nav">
-              <Link href="/about" className="eco-nav-link">About us</Link>
-              <Link href="/contacts" className="eco-nav-link">Contacts</Link>
-              <Link href="/investors" className="eco-nav-link">Investors</Link>
-              <Link href="/companies" className="eco-nav-link">Companies</Link>
+              <Link href="/" className="eco-nav-link font-black">Home</Link>
+              <Link href="/whyus" className="eco-nav-link">Why Us</Link>
+              <Link href="/core-values" className="eco-nav-link">Core Values</Link>
+              <Link href="/services" className="eco-nav-link">Services</Link>
+              <Link href="/portfolio" className="eco-nav-link">Portfolio</Link>
+              <Link href="/team" className="eco-nav-link">Team</Link>
+              <Link href="/contact" className="eco-nav-link">Contact</Link>
             </nav>
             <div className="eco-socials">
               <span className="eco-socials-label">Our socials:</span>

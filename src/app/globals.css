@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000;
+  --foreground: #fff;
+  --heading: #0ce449;
 }
 
 @theme inline {
@@ -14,8 +15,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000;
+    --foreground: #fff;
   }
 }
 
@@ -25,9 +26,13 @@ body {
   font-family: var(--font-numans), Arial, Helvetica, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
+}
+
 /* Sustainable energy inspired background */
 .sustainable-bg {
-  background: #50191f;
+  background: #000;
   min-height: 100vh;
 }
 
@@ -88,7 +93,7 @@ body {
 .eco-logo-text {
   line-height: 1.1;
   font-size: 1.1rem;
-  color: #222;
+  color: #fff;
 }
 
 .eco-nav {
@@ -107,7 +112,7 @@ body {
   text-align: center;
 }
 .eco-nav-link:hover {
-  color: #ff8c00;
+  color: #0ce449;
 }
 
 .eco-socials {
@@ -176,7 +181,7 @@ body {
   max-width: 800px;
 }
 .eco-hero-highlight {
-  color: #ffb366;
+  color: #0ce449;
   font-weight: 700;
   font-size: 1.1em;
 }
@@ -194,12 +199,12 @@ body {
 .eco-page-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
+  color: #0ce449;
   margin-bottom: 1.2rem;
 }
 .eco-page-desc {
   font-size: 1.15rem;
-  color: #e0e0e0;
+  color: #fff;
   max-width: 600px;
 }
 .eco-page-title-above-line {
@@ -210,7 +215,7 @@ body {
   top: -3.2rem;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #fff;
+  color: #0ce449;
   z-index: 5;
 }
 .eco-page-divider {
