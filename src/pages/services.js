@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import BlurFocus from "../components/BlurFocus";
+import SpotlightCard from "../components/SpotlightCard";
 
 export default function Services() {
   const sectionRef = useRef(null);
@@ -27,9 +28,8 @@ export default function Services() {
           We offer a full spectrum of sustainability services designed to transform your business operations and create lasting environmental impact.
         </p>
         <div className="eco-services-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
-          <div className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#0ce449' }}>📊</div>
-            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600' }}>Sustainability Assessment</h3>
+          <SpotlightCard className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
+            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600', textAlign: 'center' }}>Buildings Energy Simulation and Analysis</h3>
             <p style={{ color: '#e0e0e0', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Comprehensive analysis of your current environmental impact, including carbon footprint calculation, resource usage assessment, and sustainability gap analysis.
             </p>
@@ -39,11 +39,11 @@ export default function Services() {
               <li>Compliance gap analysis</li>
               <li>Stakeholder impact assessment</li>
             </ul>
-          </div>
+          </SpotlightCard>
           
-          <div className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#0ce449' }}>🎯</div>
-            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600' }}>Strategic Planning</h3>
+          <SpotlightCard className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
+            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600', textAlign: 'center' }}>Energy Assessment
+            </h3>
             <p style={{ color: '#e0e0e0', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Development of customized sustainability roadmaps aligned with your business objectives and environmental goals.
             </p>
@@ -53,11 +53,11 @@ export default function Services() {
               <li>Risk assessment and mitigation</li>
               <li>Performance metrics definition</li>
             </ul>
-          </div>
+          </SpotlightCard>
           
-          <div className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#0ce449' }}>🤖</div>
-            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600' }}>AI-Powered Modeling</h3>
+          <SpotlightCard className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
+            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600', textAlign: 'center' }}>Code Compliance and Certification
+            </h3>
             <p style={{ color: '#e0e0e0', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Advanced predictive modeling using machine learning to optimize sustainability outcomes and business performance.
             </p>
@@ -67,11 +67,11 @@ export default function Services() {
               <li>Optimization algorithms</li>
               <li>Real-time monitoring</li>
             </ul>
-          </div>
+          </SpotlightCard>
           
-          <div className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#0ce449' }}>🔄</div>
-            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600' }}>Implementation Support</h3>
+          <SpotlightCard className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
+            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600', textAlign: 'center' }}>Retrofit Solutions
+            </h3>
             <p style={{ color: '#e0e0e0', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Hands-on support throughout the implementation process, ensuring successful adoption of sustainable practices.
             </p>
@@ -81,11 +81,11 @@ export default function Services() {
               <li>Process optimization</li>
               <li>Technology integration</li>
             </ul>
-          </div>
+          </SpotlightCard>
           
-          <div className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#0ce449' }}>📈</div>
-            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600' }}>Performance Monitoring</h3>
+          <SpotlightCard className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
+            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600', textAlign: 'center' }}>Renewable Energy Integration
+            </h3>
             <p style={{ color: '#e0e0e0', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Ongoing monitoring and reporting to track progress, identify opportunities, and ensure continuous improvement.
             </p>
@@ -95,11 +95,10 @@ export default function Services() {
               <li>Benchmark analysis</li>
               <li>Continuous optimization</li>
             </ul>
-          </div>
+          </SpotlightCard>
           
-          <div className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
-            <div style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: '#0ce449' }}>🏆</div>
-            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600' }}>Certification Support</h3>
+          <SpotlightCard className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
+            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600', textAlign: 'center' }}>HVAC Optimization</h3>
             <p style={{ color: '#e0e0e0', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Assistance with sustainability certifications and compliance requirements to enhance your market position.
             </p>
@@ -109,7 +108,23 @@ export default function Services() {
               <li>ESG reporting</li>
               <li>Regulatory compliance</li>
             </ul>
-          </div>
+          </SpotlightCard>
+
+          <SpotlightCard className="eco-service-card" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
+            <h3 style={{ color: '#0ce449', fontSize: '1.8rem', marginBottom: '1rem', fontWeight: '600', textAlign: 'center' }}>Energy Audits for Buildings and Industry
+            </h3>
+            <p style={{ color: '#e0e0e0', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+              Assistance with sustainability certifications and compliance requirements to enhance your market position.
+            </p>
+            <ul style={{ color: '#e0e0e0', lineHeight: '1.6', paddingLeft: '1.5rem' }}>
+              <li>ISO 14001 certification</li>
+              <li>LEED compliance</li>
+              <li>ESG reporting</li>
+              <li>Regulatory compliance</li>
+            </ul>
+          </SpotlightCard>
+
+          
         </div>
       </div>
     </section>

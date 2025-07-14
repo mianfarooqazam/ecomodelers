@@ -19,13 +19,13 @@ export default function MyApp({ Component, pageProps }) {
               <Image src={require("../app/eco-logo.jpeg")} alt="Logo" width={36} height={36} />
             </div>
             <nav className="eco-nav">
-              <Link href="/" className="eco-nav-link font-black">Home</Link>
-              <Link href="/whyus" className="eco-nav-link">Why Us</Link>
-              <Link href="/core-values" className="eco-nav-link">Core Values</Link>
-              <Link href="/services" className="eco-nav-link">Services</Link>
-              <Link href="/portfolio" className="eco-nav-link">Portfolio</Link>
-              <Link href="/team" className="eco-nav-link">Team</Link>
-              <Link href="/contact" className="eco-nav-link">Contact</Link>
+              <Link href="/" className="eco-nav-link font-black">HOME</Link>
+              <Link href="/whyus" className="eco-nav-link">WHY US</Link>
+              <Link href="/core-values" className="eco-nav-link">CORE VALUES</Link>
+              <Link href="/services" className="eco-nav-link">SERVICES</Link>
+              <Link href="/portfolio" className="eco-nav-link">PORTFOLIO</Link>
+              <Link href="/team" className="eco-nav-link">TEAM</Link>
+              <Link href="/contact" className="eco-nav-link">CONTACT</Link>
             </nav>
             <div className="eco-socials">
               <span className="eco-socials-label">Our socials:</span>
