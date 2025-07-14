@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import BlurFocus from "../components/BlurFocus";
 
 export default function Contact() {
   const sectionRef = useRef(null);
@@ -36,10 +37,15 @@ export default function Contact() {
   };
 
   return (
-    <section className="eco-page-section" ref={sectionRef}>
-      <div className="eco-page-content">
-        <h2 className="eco-page-title">Ready to Transform Your Business?</h2>
-        <p className="eco-page-desc">
+    <section className="eco-hero-section" ref={sectionRef}>
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
+        <h1 className="eco-hero-title">
+          Transforming Business Through<br />
+          <span className="eco-hero-highlight">
+            <BlurFocus sentence="Sustainable Innovation" />
+          </span>
+        </h1>
+        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem' }}>
           Let&apos;s discuss how we can help you achieve your sustainability goals while driving business growth. Get in touch with our team today.
         </p>
         <div className="eco-contact-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>

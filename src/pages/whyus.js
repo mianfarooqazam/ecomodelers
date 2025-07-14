@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import BlurFocus from "../components/BlurFocus";
 
 export default function WhyUs() {
   const sectionRef = useRef(null);
@@ -14,10 +15,15 @@ export default function WhyUs() {
   }, []);
 
   return (
-    <section className="eco-page-section" ref={sectionRef}>
-      <div className="eco-page-content">
-        <h2 className="eco-page-title">Sustainable Innovation at Its Core</h2>
-        <p className="eco-page-desc">
+    <section className="eco-hero-section" ref={sectionRef}>
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
+        <h1 className="eco-hero-title">
+          Transforming Business Through<br />
+          <span className="eco-hero-highlight">
+            <BlurFocus sentence="Sustainable Innovation" />
+          </span>
+        </h1>
+        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem' }}>
           We are pioneers in sustainable business modeling, combining cutting-edge technology with environmental consciousness to create solutions that benefit both your business and the planet.
         </p>
         <div className="eco-features-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>

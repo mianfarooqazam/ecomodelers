@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import BlurFocus from "../components/BlurFocus";
 
 export default function Portfolio() {
   const sectionRef = useRef(null);
@@ -14,13 +15,17 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <section className="eco-page-section" ref={sectionRef}>
-      <div className="eco-page-content">
-        <h2 className="eco-page-title">Transforming Businesses Through Sustainability</h2>
-        <p className="eco-page-desc">
+    <section className="eco-hero-section" ref={sectionRef}>
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
+        <h1 className="eco-hero-title">
+          Transforming Business Through<br />
+          <span className="eco-hero-highlight">
+            <BlurFocus sentence="Sustainable Innovation" />
+          </span>
+        </h1>
+        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem' }}>
           Discover how we&apos;ve helped organizations across industries achieve remarkable sustainability outcomes while driving business growth.
         </p>
-        
         <div className="eco-portfolio-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))', gap: '2.5rem' }}>
           <div className="eco-portfolio-item" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>

@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import BlurFocus from "../components/BlurFocus";
 
 export default function CompaniesPage() {
   const sectionRef = useRef(null);
@@ -14,9 +15,18 @@ export default function CompaniesPage() {
   }, []);
 
   return (
-    <section className="eco-page-section" id="companies-section" ref={sectionRef}>
-      <h1 className="eco-page-title eco-page-title-above-line">Companies</h1>
-      <p className="eco-page-desc">Meet the innovative companies we work with. Each one is committed to driving positive change in their industry.</p>
+    <section className="eco-hero-section" ref={sectionRef}>
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
+        <h1 className="eco-hero-title">
+          Transforming Business Through<br />
+          <span className="eco-hero-highlight">
+            <BlurFocus sentence="Sustainable Innovation" />
+          </span>
+        </h1>
+        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem' }}>
+          Meet the innovative companies we work with. Each one is committed to driving positive change in their industry.
+        </p>
+      </div>
     </section>
   );
 } 

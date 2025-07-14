@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import BlurFocus from "../components/BlurFocus";
 
 export default function CoreValues() {
   const sectionRef = useRef(null);
@@ -14,10 +15,15 @@ export default function CoreValues() {
   }, []);
 
   return (
-    <section className="eco-page-section" ref={sectionRef}>
-      <div className="eco-page-content">
-        <h2 className="eco-page-title">The Principles That Drive Us</h2>
-        <p className="eco-page-desc">
+    <section className="eco-hero-section" ref={sectionRef}>
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
+        <h1 className="eco-hero-title">
+          Transforming Business Through<br />
+          <span className="eco-hero-highlight">
+            <BlurFocus sentence="Sustainable Innovation" />
+          </span>
+        </h1>
+        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem' }}>
           Our core values are the foundation of everything we do. They guide our decisions, shape our relationships, and inspire our commitment to creating a sustainable future.
         </p>
         <div className="eco-values-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
