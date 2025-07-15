@@ -2,7 +2,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import BlurFocus from "../components/BlurFocus";
-import Crosshair from "../components/Crosshair";
 
 export default function Home() {
   const sectionRef = useRef(null);
@@ -17,24 +16,16 @@ export default function Home() {
 
   return (
     <>
-      <Crosshair color="#0ce449" />
       <section className="eco-hero-section" ref={sectionRef}>
-        <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
-          <h1 className="eco-hero-title">
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff', textAlign: 'center' }}>
+      <h1 className="eco-hero-title" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
             Transforming Business Through<br />
-            <span className="eco-hero-highlight">
-              <BlurFocus sentence="Sustainable Innovation" />
-            </span>
+            <span className="eco-hero-highlight" style={{ display: 'inline-block' }}>
+            <BlurFocus sentence="Sustainable Innovation" />
+          </span>
           </h1>
           
-          <p style={{ 
-            color: '#fff', 
-            fontSize: '1.3rem', 
-            lineHeight: '1.6', 
-            marginTop: '2rem', 
-            maxWidth: '600px',
-            marginBottom: '3rem'
-          }}>
+          <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '700px', marginBottom: '1.5rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'justify' }}>
           Energy efficiency is no longer a luxury — it`&apos;s a necessity. Whether it`&apos;s a commercial high-rise, industrial facility, or residential building, Ecomodelers delivers smart energy solutions that reduce consumption, lower costs, and enhance sustainability.
 
           </p>
@@ -87,41 +78,26 @@ export default function Home() {
           </div>
           
           <div style={{ marginTop: '4rem', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <button style={{
-              background: 'linear-gradient(135deg, #ffb366, #ff8c00)',
-              color: '#fff',
-              padding: '1rem 2.5rem',
-              borderRadius: '8px',
-              border: 'none',
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              cursor: 'pointer',
-              transition: 'transform 0.2s'
-            }}
-            onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'}
-            onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
-            >
-              Start Your Journey
-            </button>
+           
             
             <button style={{
               background: 'transparent',
-              color: '#ffb366',
+              color: '#0ce449',
               padding: '1rem 2.5rem',
               borderRadius: '8px',
-              border: '2px solid #ffb366',
+              border: '2px solid #0ce449',
               fontSize: '1.1rem',
               fontWeight: '600',
               cursor: 'pointer',
               transition: 'all 0.2s'
             }}
             onMouseEnter={(e) => {
-              e.target.style.background = '#ffb366';
+              e.target.style.background = '#0ce449';
               e.target.style.color = '#fff';
             }}
             onMouseLeave={(e) => {
               e.target.style.background = 'transparent';
-              e.target.style.color = '#ffb366';
+              e.target.style.color = '#0ce449';
             }}
             >
               View Our Portfolio
