@@ -17,14 +17,14 @@ export default function Services() {
 
   return (
     <section className="eco-hero-section" ref={sectionRef}>
-      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
-        <h1 className="eco-hero-title">
-          Transforming Business Through<br />
-          <span className="eco-hero-highlight">
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff', textAlign: 'center' }}>
+        <h1 className="eco-hero-title" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+          Services provided<br />
+          <span className="eco-hero-highlight" style={{ display: 'inline-block' }}>
             <BlurFocus sentence="Sustainable Innovation" />
           </span>
         </h1>
-        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem' }}>
+        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
           We offer a full spectrum of sustainability services designed to transform your business operations and create lasting environmental impact.
         </p>
         <div className="eco-services-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
