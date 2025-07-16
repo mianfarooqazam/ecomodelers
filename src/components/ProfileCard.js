@@ -263,7 +263,6 @@ const ProfileCardComponent = ({
               <h3 style={{margin:0, fontWeight:600, fontSize:'1.5em', color:'#fff', textShadow:'0 2px 8px #000'}}> {name} </h3>
               <p style={{margin:0, fontWeight:400, fontSize:'1em', color:'#fff', textShadow:'0 2px 8px #000'}}> {title} </p>
             </div>
-            {/* Optionally, keep the contact button floating above the overlay, or remove/move as needed */}
           </div>
         </div>
       </section>

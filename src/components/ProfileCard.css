@@ -200,9 +200,9 @@
 }
 
 .pc-avatar-overlay h3, .pc-avatar-overlay p {
-  margin: 0;
-  color: #fff;
+  color: #e53935 !important; /* Material Red 600 for good contrast */
   text-shadow: 0 2px 8px #000;
+  margin: 0;
 }
 
 .pc-avatar-content {
