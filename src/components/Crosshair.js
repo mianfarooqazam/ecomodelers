@@ -150,7 +150,8 @@ const Crosshair = ({ color = "white", containerRef = null }) => {
       ref={cursorRef}
       className={`${
         containerRef ? "absolute" : "fixed"
-      } top-0 left-0 w-full h-full pointer-events-none z-[10000]`}
+      } top-0 left-0 w-full h-full`}
+      style={{ zIndex: 1 }}
     >
       <svg className="absolute top-0 left-0 w-full h-full">
         <defs>
@@ -176,12 +177,12 @@ const Crosshair = ({ color = "white", containerRef = null }) => {
       </svg>
       <div
         ref={lineHorizontalRef}
-        className={`absolute w-full h-px pointer-events-none opacity-0 transform translate-y-1/2`}
+        className={`absolute w-full h-px opacity-0 transform translate-y-1/2`}
         style={{ background: color }}
       ></div>
       <div
         ref={lineVerticalRef}
-        className={`absolute h-full w-px pointer-events-none opacity-0 transform translate-x-1/2`}
+        className={`absolute h-full w-px opacity-0 transform translate-x-1/2`}
         style={{ background: color }}
       ></div>
     </div>

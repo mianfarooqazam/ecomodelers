@@ -16,6 +16,11 @@ const BlurFocus = ({
   const containerRef = useRef(null);
   const wordRefs = useRef([]);
   const [focusRect, setFocusRect] = useState({ x: 0, y: 0, width: 0, height: 0 });
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (!manualMode) {
@@ -54,6 +59,13 @@ const BlurFocus = ({
       setCurrentIndex(lastActiveIndex);
     }
   };
+
+  if (!isClient) {
+    // Render static version for SSR to avoid hydration mismatch
+    return (
+      <span className="font-black" style={{ color: borderColor, filter: `drop-shadow(0 0 4px ${glowColor})` }}>{sentence}</span>
+    );
+  }
 
   return (
     <div
