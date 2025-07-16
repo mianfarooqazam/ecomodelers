@@ -26,11 +26,7 @@ export default function Team() {
             <BlurFocus sentence="Together, we’re more than a team" />
           </span>
           </h1>
-          
-          {/* <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '700px', marginBottom: '1.5rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'justify' }}>
-          At the heart of our success is a passionate, diverse, and driven team. Every member brings unique skills, creativity, and commitment to excellence. Together, we push boundaries, embrace innovation, and deliver outstanding results.
-
-          </p> */}
+        
           
         <div className="eco-team-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
           <ProfileCard
@@ -50,7 +46,7 @@ export default function Team() {
             handle="davidjohnson"
             status="Online"
             contactText="Contact"
-            avatarUrl="/eco-logo.jpeg"
+            avatarUrl="/profile-1.jpg"
             showUserInfo={true}
             enableTilt={true}
             onContactClick={() => console.log('Contact David')}
@@ -61,7 +57,7 @@ export default function Team() {
             handle="mariachen"
             status="Online"
             contactText="Contact"
-            avatarUrl="/eco-logo.jpeg"
+            avatarUrl="/profile-2.jpg"
             showUserInfo={true}
             enableTilt={true}
             onContactClick={() => console.log('Contact Maria')}
@@ -72,7 +68,7 @@ export default function Team() {
             handle="robertkim"
             status="Online"
             contactText="Contact"
-            avatarUrl="/eco-logo.jpeg"
+            avatarUrl="/profile.jpg"
             showUserInfo={true}
             enableTilt={true}
             onContactClick={() => console.log('Contact Robert')}
@@ -83,7 +79,7 @@ export default function Team() {
             handle="amandalee"
             status="Online"
             contactText="Contact"
-            avatarUrl="/eco-logo.jpeg"
+            avatarUrl="/profile-2.jpg"
             showUserInfo={true}
             enableTilt={true}
             onContactClick={() => console.log('Contact Amanda')}
@@ -94,7 +90,7 @@ export default function Team() {
             handle="thomaspatel"
             status="Online"
             contactText="Contact"
-            avatarUrl="/eco-logo.jpeg"
+            avatarUrl="/profile-1.jpg"
             showUserInfo={true}
             enableTilt={true}
             onContactClick={() => console.log('Contact Thomas')}
