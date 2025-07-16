@@ -16,14 +16,15 @@ export default function Portfolio() {
 
   return (
     <section className="eco-hero-section" ref={sectionRef}>
-      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff' }}>
-        <h1 className="eco-hero-title">
+      <div style={{ maxWidth: '1200px', width: '100%', color: '#fff', textAlign: 'center' }}>
+        <h1 className="eco-hero-title" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
           Transforming Business Through<br />
-          <span className="eco-hero-highlight">
+          <span className="eco-hero-highlight" style={{ display: 'inline-block' }}>
             <BlurFocus sentence="Sustainable Innovation" />
           </span>
         </h1>
-        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '600px', marginBottom: '3rem' }}>
+
+        <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '700px', marginBottom: '1.5rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'justify' }}>
           Discover how we&apos;ve helped organizations across industries achieve remarkable sustainability outcomes while driving business growth.
         </p>
         <div className="eco-portfolio-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))', gap: '2.5rem' }}>
@@ -44,7 +45,7 @@ export default function Portfolio() {
               <span style={{ background: 'rgba(12,228,73,0.2)', color: '#0ce449', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem' }}>Cost Savings</span>
             </div>
           </div>
-          
+
           <div className="eco-portfolio-item" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div style={{ fontSize: '2.5rem', marginRight: '1rem', color: '#0ce449' }}>🏢</div>
@@ -62,7 +63,7 @@ export default function Portfolio() {
               <span style={{ background: 'rgba(12,228,73,0.2)', color: '#0ce449', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem' }}>Energy Efficiency</span>
             </div>
           </div>
-          
+
           <div className="eco-portfolio-item" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div style={{ fontSize: '2.5rem', marginRight: '1rem', color: '#0ce449' }}>🏥</div>
@@ -80,7 +81,7 @@ export default function Portfolio() {
               <span style={{ background: 'rgba(12,228,73,0.2)', color: '#0ce449', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem' }}>Cost Optimization</span>
             </div>
           </div>
-          
+
           <div className="eco-portfolio-item" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div style={{ fontSize: '2.5rem', marginRight: '1rem', color: '#0ce449' }}>🏪</div>
@@ -98,7 +99,7 @@ export default function Portfolio() {
               <span style={{ background: 'rgba(12,228,73,0.2)', color: '#0ce449', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem' }}>Transportation</span>
             </div>
           </div>
-          
+
           <div className="eco-portfolio-item" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div style={{ fontSize: '2.5rem', marginRight: '1rem', color: '#0ce449' }}>🏗️</div>
@@ -116,7 +117,7 @@ export default function Portfolio() {
               <span style={{ background: 'rgba(12,228,73,0.2)', color: '#0ce449', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem' }}>Material Sourcing</span>
             </div>
           </div>
-          
+
           <div className="eco-portfolio-item" style={{ background: '#111', padding: '2.5rem', borderRadius: '16px', border: '1px solid #222' }}>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div style={{ fontSize: '2.5rem', marginRight: '1rem', color: '#0ce449' }}>🏦</div>
