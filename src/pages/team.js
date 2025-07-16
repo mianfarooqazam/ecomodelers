@@ -18,14 +18,19 @@ export default function Team() {
 
   return (
     <section className="eco-hero-section" ref={sectionRef}>
-     <div style={{ maxWidth: '1200px', width: '100%', textAlign: 'center' }}>
-      <h1 className="eco-hero-title" style={{ marginLeft: 'auto', marginRight: 'auto', color: '#0ce449' }}>
-            Meet The Team Who Can Make It Possible<br />
+    
+         <div style={{ maxWidth: '1200px', width: '100%', color: '#fff', textAlign: 'center' }}>
+      <h1 className="eco-hero-title" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+      Meet The Team <br />
             <span className="eco-hero-highlight" style={{ display: 'inline-block' }}>
-           
+            <BlurFocus sentence="Together, we’re more than a team" />
           </span>
           </h1>
           
+          {/* <p style={{ color: '#fff', fontSize: '1.3rem', lineHeight: '1.6', marginTop: '2rem', maxWidth: '700px', marginBottom: '1.5rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'justify' }}>
+          At the heart of our success is a passionate, diverse, and driven team. Every member brings unique skills, creativity, and commitment to excellence. Together, we push boundaries, embrace innovation, and deliver outstanding results.
+
+          </p> */}
           
         <div className="eco-team-grid" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2.5rem' }}>
           <ProfileCard
