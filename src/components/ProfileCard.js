@@ -247,30 +247,23 @@ const ProfileCardComponent = ({
         <div className="pc-inside">
           <div className="pc-shine" />
           <div className="pc-glare" />
-          <div className="pc-content pc-avatar-content">
-            <div className="pc-details" style={{ position: 'static', marginBottom: '1.5rem' }}>
-              <h3>{name}</h3>
-              <p>{title}</p>
-            </div>
+          <div className="pc-content pc-avatar-content" style={{padding:0, minHeight:0, height:'100%', width:'100%', position:'relative', display:'flex', alignItems:'flex-end', justifyContent:'center', overflow:'hidden'}}>
             <img
-              className="avatar"
+              className="avatar pc-avatar-bg"
               src={avatarUrl}
               alt={`${name || "User"} avatar`}
               loading="lazy"
+              style={{objectFit:'cover', width:'100%', height:'100%', position:'absolute', top:0, left:0, zIndex:1}}
               onError={(e) => {
                 const target = e.target;
                 target.style.display = "none";
               }}
             />
-            <button
-              className="pc-contact-btn"
-              onClick={handleContactClick}
-              style={{ pointerEvents: "auto", marginTop: '2rem' }}
-              type="button"
-              aria-label={`Contact ${name || "user"}`}
-            >
-              {contactText}
-            </button>
+            <div className="pc-details pc-avatar-overlay" style={{position:'absolute', bottom:0, left:0, width:'100%', zIndex:2, background:'rgba(0,0,0,0.45)', color:'#fff', padding:'1.2em 0.5em 1.2em 0.5em', textAlign:'center', borderBottomLeftRadius:'inherit', borderBottomRightRadius:'inherit'}}>
+              <h3 style={{margin:0, fontWeight:600, fontSize:'1.5em', color:'#fff', textShadow:'0 2px 8px #000'}}> {name} </h3>
+              <p style={{margin:0, fontWeight:400, fontSize:'1em', color:'#fff', textShadow:'0 2px 8px #000'}}> {title} </p>
+            </div>
+            {/* Optionally, keep the contact button floating above the overlay, or remove/move as needed */}
           </div>
         </div>
       </section>

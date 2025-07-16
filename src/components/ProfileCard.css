@@ -13,19 +13,10 @@
   --icon: none;
   --behind-gradient: none;
   --inner-gradient: none;
-  --sunpillar-1: hsl(2, 100%, 73%);
-  --sunpillar-2: hsl(53, 100%, 69%);
-  --sunpillar-3: hsl(93, 100%, 69%);
-  --sunpillar-4: hsl(176, 100%, 76%);
-  --sunpillar-5: hsl(228, 100%, 74%);
-  --sunpillar-6: hsl(283, 100%, 73%);
-  --sunpillar-clr-1: var(--sunpillar-1);
-  --sunpillar-clr-2: var(--sunpillar-2);
-  --sunpillar-clr-3: var(--sunpillar-3);
-  --sunpillar-clr-4: var(--sunpillar-4);
-  --sunpillar-clr-5: var(--sunpillar-5);
-  --sunpillar-clr-6: var(--sunpillar-6);
   --card-radius: 30px;
+  /* Remove sunpillar variables */
+  --main-green: #0ce449;
+  --main-dark: #101c12;
 }
 
 .pc-card-wrapper {
@@ -74,7 +65,11 @@
   transform: translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg);
   background-size: 100% 100%;
   background-position: 0 0, 0 0, 50% 50%, 0 0;
-  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 90%, var(--card-opacity)) 4%, hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaac4 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ffff 0%, #07c6ffff 40%, #07c6ffff 60%, #c137ffff 100%);
+  background-image:
+    linear-gradient(180deg, rgba(12,228,73,0.18) 0%, rgba(16,28,18,0.95) 100%),
+    linear-gradient(120deg, rgba(12,228,73,0.12) 0%, rgba(16,28,18,0.85) 100%);
+  background-size: 100% 100%;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -114,19 +109,13 @@
 
 .pc-shine,
 .pc-shine::after {
-  --space: 5%;
-  --angle: -45deg;
-  transform: translate3d(0, 0, 1px);
-  overflow: hidden;
-  z-index: 3;
-  background: transparent;
-  background-size: cover;
-  background-position: center;
-  background-image: repeating-linear-gradient(0deg, var(--sunpillar-clr-1) calc(var(--space) * 1), var(--sunpillar-clr-2) calc(var(--space) * 2), var(--sunpillar-clr-3) calc(var(--space) * 3), var(--sunpillar-clr-4) calc(var(--space) * 4), var(--sunpillar-clr-5) calc(var(--space) * 5), var(--sunpillar-clr-6) calc(var(--space) * 6), var(--sunpillar-clr-1) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%);
-  background-position: 0 var(--background-y), var(--background-x) var(--background-y), center;
+  /* Remove rainbow and use green/dark blend */
+  background-image:
+    linear-gradient(120deg, rgba(12,228,73,0.18) 0%, rgba(16,28,18,0.85) 100%),
+    linear-gradient(0deg, rgba(12,228,73,0.10) 0%, rgba(16,28,18,0.7) 100%);
+  background-size: 100% 100%, 100% 100%;
+  background-position: center, center;
   background-blend-mode: color, hard-light;
-  background-size: 500% 500%, 300% 300%, 200% 200%;
-  background-repeat: repeat;
 }
 
 .pc-shine::before,
@@ -152,9 +141,11 @@
 }
 
 .pc-shine::before {
-  background-image: linear-gradient(45deg, var(--sunpillar-4), var(--sunpillar-5), var(--sunpillar-6), var(--sunpillar-1), var(--sunpillar-2), var(--sunpillar-3)), radial-gradient(circle at var(--pointer-x) var(--pointer-y), hsl(0, 0%, 70%) 0%, hsla(0, 0%, 30%, 0.2) 90%), var(--grain);
-  background-size: 250% 250%, 100% 100%, 220px 220px;
-  background-position: var(--pointer-x) var(--pointer-y), center, calc(var(--pointer-x) * 0.01) calc(var(--pointer-y) * 0.01);
+  /* Remove rainbow and use green/dark blend */
+  background-image:
+    linear-gradient(120deg, rgba(12,228,73,0.25) 0%, rgba(16,28,18,0.7) 100%);
+  background-size: 100% 100%;
+  background-position: center;
   background-blend-mode: color-dodge;
   filter: brightness(calc(2 - var(--pointer-from-center))) contrast(calc(var(--pointer-from-center) + 2)) saturate(calc(0.5 + var(--pointer-from-center)));
   mix-blend-mode: luminosity;
@@ -176,48 +167,59 @@
   z-index: 4;
 }
 
-.pc-avatar-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 320px;
-  padding-top: 2.5rem;
-  padding-bottom: 1.5rem;
-  background: none;
-  position: relative;
-  mix-blend-mode: screen;
-  overflow: visible;
-}
-
-.pc-avatar-content .avatar {
-  width: 70%;
-  max-width: 260px;
-  height: auto;
-  position: static;
-  left: unset;
-  bottom: unset;
-  top: unset;
-  transform: none;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  opacity: 1;
-}
-
-.pc-avatar-content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.pc-avatar-bg {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
   z-index: 1;
-  backdrop-filter: blur(30px);
-  mask: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 60%,
-      rgba(0, 0, 0, 1) 90%,
-      rgba(0, 0, 0, 1) 100%);
-  pointer-events: none;
+  border-radius: inherit;
+}
+
+.pc-avatar-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: #000;
+  color: #fff;
+  padding: 1.2em 0.5em 1.2em 0.5em;
+  text-align: center;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  box-shadow: 0 -8px 32px rgba(0,0,0,0.18);
+}
+
+.pc-avatar-overlay,
+.pc-avatar-overlay h3,
+.pc-avatar-overlay p {
+  color: #fff !important;
+}
+
+.pc-avatar-overlay h3, .pc-avatar-overlay p {
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 8px #000;
+}
+
+.pc-avatar-content {
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  background: none !important;
+}
+
+.pc-avatar-content .avatar:not(.pc-avatar-bg) {
+  display: none !important;
 }
 
 .pc-content {
