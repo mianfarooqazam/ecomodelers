@@ -1,19 +1,12 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { headerData } from '../Header/Navigation/menuData'
 import Logo from './Logo'
 import HeaderLink from '../Header/Navigation/HeaderLink'
 import MobileHeaderLink from '../Header/Navigation/MobileHeaderLink'
-import Signin from '@/components/Auth/SignIn'
-import SignUp from '@/components/Auth/SignUp'
 import { useTheme } from 'next-themes'
-import { Icon } from '@iconify/react/dist/iconify.js'
-import { SuccessfullLogin } from '@/components/Auth/AuthDialog/SuccessfulLogin'
-import { FailedLogin } from '@/components/Auth/AuthDialog/FailedLogin'
-import { UserRegistered } from '@/components/Auth/AuthDialog/UserRegistered'
-import AuthDialogContext from '@/app/context/AuthDialogContext'
 
 const Header: React.FC = () => {
   const pathUrl = usePathname()
@@ -21,12 +14,7 @@ const Header: React.FC = () => {
 
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
-  const [isSignInOpen, setIsSignInOpen] = useState(false)
-  const [isSignUpOpen, setIsSignUpOpen] = useState(false)
 
-  const navbarRef = useRef<HTMLDivElement>(null)
-  const signInRef = useRef<HTMLDivElement>(null)
-  const signUpRef = useRef<HTMLDivElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = () => {
@@ -34,18 +22,6 @@ const Header: React.FC = () => {
   }
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (
-      signInRef.current &&
-      !signInRef.current.contains(event.target as Node)
-    ) {
-      setIsSignInOpen(false)
-    }
-    if (
-      signUpRef.current &&
-      !signUpRef.current.contains(event.target as Node)
-    ) {
-      setIsSignUpOpen(false)
-    }
     if (
       mobileMenuRef.current &&
       !mobileMenuRef.current.contains(event.target as Node) &&
@@ -62,19 +38,15 @@ const Header: React.FC = () => {
       window.removeEventListener('scroll', handleScroll)
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [navbarOpen, isSignInOpen, isSignUpOpen])
-
-  const path = usePathname()
+  }, [navbarOpen])
 
   useEffect(() => {
-    if (isSignInOpen || isSignUpOpen || navbarOpen) {
+    if (navbarOpen) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
     }
-  }, [isSignInOpen, isSignUpOpen, navbarOpen])
-
-  const authDialog = useContext(AuthDialogContext)
+  }, [navbarOpen])
 
   return (
     <header
@@ -113,62 +85,6 @@ const Header: React.FC = () => {
               <path d='M16.6111 15.855C17.591 15.1394 18.3151 14.1979 18.7723 13.1623C16.4824 13.4065 14.1342 12.4631 12.6795 10.4711C11.2248 8.47905 11.0409 5.95516 11.9705 3.84818C10.8449 3.9685 9.72768 4.37162 8.74781 5.08719C5.7759 7.25747 5.12529 11.4308 7.29558 14.4028C9.46586 17.3747 13.6392 18.0253 16.6111 15.855Z' />
             </svg>
           </button>
-          <Link
-            href='#'
-            className='hidden lg:block bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white'
-            onClick={() => {
-              setIsSignInOpen(true)
-            }}>
-            Sign In
-          </Link>
-          {isSignInOpen && (
-            <div
-              ref={signInRef}
-              className='fixed top-0 m-0! left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
-              <div className='relative mx-auto w-full max-w-md overflow-hidden rounded-lg bg-white px-8 py-14 text-center dark:bg-darklight'>
-                <button
-                  onClick={() => setIsSignInOpen(false)}
-                  className=' hover:bg-gray-200 dark:hover:bg-gray-800 p-1 rounded-full absolute -top-5 -right-3 mr-8 mt-8'
-                  aria-label='Close Sign In Modal'>
-                  <Icon
-                    icon='ic:round-close'
-                    className='text-2xl dark:text-white'
-                  />
-                </button>
-                <Signin
-                  signInOpen={(value: boolean) => setIsSignInOpen(value)}
-                />
-              </div>
-            </div>
-          )}
-          <Link
-            href='#'
-            className='hidden lg:block bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700'
-            onClick={() => {
-              setIsSignUpOpen(true)
-            }}>
-            Sign Up
-          </Link>
-          {isSignUpOpen && (
-            <div
-              ref={signUpRef}
-              className='fixed top-0 m-0! left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
-              <div className='relative mx-auto w-full max-w-md overflow-hidden rounded-lg bg-white px-8 py-14 text-center dark:bg-darklight'>
-                <button
-                  onClick={() => setIsSignUpOpen(false)}
-                  className=' hover:bg-gray-200 dark:hover:bg-gray-800 p-1 rounded-full absolute -top-5 -right-3 mr-8 mt-8'
-                  aria-label='Close Sign In Modal'>
-                  <Icon
-                    icon='ic:round-close'
-                    className='text-2xl dark:text-white'
-                  />
-                </button>
-                <SignUp
-                  signUpOpen={(value: boolean) => setIsSignUpOpen(value)}
-                />
-              </div>
-            </div>
-          )}
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
             className='block lg:hidden p-2 rounded-lg'
@@ -216,48 +132,7 @@ const Header: React.FC = () => {
           {headerData.map((item, index) => (
             <MobileHeaderLink key={index} item={item} />
           ))}
-          <div className='mt-4 flex flex-col gap-4 w-full'>
-            <Link
-              href='#'
-              className='bg-transparent border border-primary text-primary px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white'
-              onClick={() => {
-                setIsSignInOpen(true)
-                setNavbarOpen(false)
-              }}>
-              Sign In
-            </Link>
-            <Link
-              href='#'
-              className='bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700'
-              onClick={() => {
-                setIsSignUpOpen(true)
-                setNavbarOpen(false)
-              }}>
-              Sign Up
-            </Link>
-          </div>
         </nav>
-      </div>
-      {/* Successsful Login Alert */}
-      <div
-        className={`fixed top-6 end-1/2 translate-x-1/2 z-50 ${
-          authDialog?.isSuccessDialogOpen == true ? 'block' : 'hidden'
-        }`}>
-        <SuccessfullLogin />
-      </div>
-      {/* Failed Login Alert */}
-      <div
-        className={`fixed top-6 end-1/2 translate-x-1/2 z-50 ${
-          authDialog?.isFailedDialogOpen == true ? 'block' : 'hidden'
-        }`}>
-        <FailedLogin />
-      </div>
-      {/* User registration Alert */}
-      <div
-        className={`fixed top-6 end-1/2 translate-x-1/2 z-50 ${
-          authDialog?.isUserRegistered == true ? 'block' : 'hidden'
-        }`}>
-        <UserRegistered />
       </div>
     </header>
   )
