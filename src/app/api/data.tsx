@@ -37,16 +37,19 @@ export const Servicebox = [
     {
         icon: getImgPath('/images/services/ux-design-product_1.svg'),
         title: 'UX & Product Design',
+        slug: 'ux-product-design',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
         icon: getImgPath('/images/services/perfomance-optimization.svg'),
         title: 'Performance Optimization',
+        slug: 'performance-optimization',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
         icon: getImgPath('/images/services/ux-design-product_2.svg'),
         title: 'UX & Products Design',
+        slug: 'ux-products-design',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
 ]
